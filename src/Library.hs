@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Eta reduce" #-}
 module Library where
 import PdePreludat
 
@@ -35,7 +37,7 @@ esLigero :: Number -> Bool
 esLigero altura = pesoPino altura < 500
 
 esMediano :: Number -> Bool
-esMediano altura = pesoPino altura >= 500 && pesoPino altura <= 800
+esMediano altura = pesoPino altura >= 500 && pesoPino altura <= 800 --El enunciado tiene un error, deberia decir que uno mediano pesa entre 500 y 800.
 
 esPesado :: Number -> Bool
 esPesado altura = pesoPino altura > 800
